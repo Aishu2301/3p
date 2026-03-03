@@ -55,7 +55,6 @@ section {
         @apply xl:mt-20 md:mt-0 mt-40;
     }
 
-    /* General Grids */
     .grid-base {
         @apply grid grid-cols-1;
     }
@@ -155,7 +154,7 @@ section {
     }
 
     .app-showcase {
-        @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
+        @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 block;
 
         .showcaselayout {
             @apply flex xl:flex-row flex-col gap-10 justify-between;
@@ -259,23 +258,25 @@ section {
     }
 
     .tech-card-animated-bg {
-        @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+        @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700 rounded-full;
     }
 
+    /* ✅ FIXED: removed xl:h-[50vh] — was making cards giant */
     .tech-card-content {
-        @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
+        @apply flex flex-col md:justify-center items-center gap-4 h-full overflow-hidden relative z-10 group-hover:cursor-grab py-8;
 
         & p {
-            @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
+            @apply text-lg font-semibold text-white-50 text-center pb-2;
         }
     }
 
     .tech-grid {
-        @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
+        @apply flex flex-wrap justify-center gap-12 mt-16;
     }
 
+    /* ✅ FIXED: was w-52 h-60 (huge) — now a reasonable size */
     .tech-icon-wrapper {
-        @apply flex justify-center items-center w-52 h-60 relative;
+        @apply flex justify-center items-center w-32 h-36 relative;
     }
 
     form {
@@ -336,62 +337,35 @@ section {
 }
 
 @keyframes wordSlider {
-    0% {
-        transform: translateY(0.5%);
-    }
-    12.5% {
-        transform: translateY(-12.5%);
-    }
-    25% {
-        transform: translateY(-25%);
-    }
-    37.5% {
-        transform: translateY(-37.5%);
-    }
-    50% {
-        transform: translateY(-50%);
-    }
-    62.5% {
-        transform: translateY(-62.5%);
-    }
-    75% {
-        transform: translateY(-75%);
-    }
-    87.5% {
-        transform: translateY(-87.5%);
-    }
+    0%    { transform: translateY(0.5%);   }
+    12.5% { transform: translateY(-12.5%); }
+    25%   { transform: translateY(-25%);   }
+    37.5% { transform: translateY(-37.5%); }
+    50%   { transform: translateY(-50%);   }
+    62.5% { transform: translateY(-62.5%); }
+    75%   { transform: translateY(-75%);   }
+    87.5% { transform: translateY(-87.5%); }
 }
-
-/* Hero Text slider ends */
 
 .gradient-line {
     width: 2px;
     background: linear-gradient(
-            0deg,
-            rgba(69, 222, 196, 0) 0%,
-            #62e0ff 25%,
-            #52aeff 37.51%,
-            #fd5c79 62.83%,
-            #6d45ce 92.91%
+        0deg,
+        rgba(69, 222, 196, 0) 0%,
+        #62e0ff 25%,
+        #52aeff 37.51%,
+        #fd5c79 62.83%,
+        #6d45ce 92.91%
     );
 }
 
 .gradient-edge:nth-of-type(1) {
     left: 0;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 }
 .gradient-edge:nth-of-type(2) {
     right: 0;
-    background: linear-gradient(
-            -90deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(-90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 }
 
 /* marquee */
@@ -409,18 +383,12 @@ section {
     overflow: hidden;
     animation: marquee 60s linear infinite;
 }
-.marquee-item {
-    float: left;
-}
+.marquee-item { float: left; }
+
 @keyframes marquee {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -100%;
-    }
+    0%   { left: 0;     }
+    100% { left: -100%; }
 }
-/* marquee end */
 
 .card {
     --start: 0;
@@ -443,12 +411,12 @@ section {
     background: var(--gradient);
     background-attachment: fixed;
     mask: linear-gradient(#0000, #0000),
-    conic-gradient(
+        conic-gradient(
             from calc((var(--start) - 15) * 1deg),
             #ffffff1f 0deg,
             white,
             #ffffff00 100deg
-    );
+        );
     mask-composite: intersect;
     mask-clip: padding-box, border-box;
     opacity: 0;
@@ -463,10 +431,61 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    filter: blur(10px);
-    filter: saturate(200);
+    filter: blur(10px) saturate(200);
 }
 
-.card:hover::before {
-    opacity: 1;
+.card:hover::before { opacity: 1; }
+
+.flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    border-radius: 12px;
+}
+
+.flip-card-inner.flipped { transform: rotateY(180deg); }
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flip-card-back {
+    background-color: #111;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-card {
+    width: 100%;
+    aspect-ratio: 6 / 5;
+}
+
+.small-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
 }

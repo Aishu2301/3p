@@ -22,17 +22,7 @@ const words = [
     { text: "Concepts", imgPath: "/images/concepts.svg" },
     { text: "Designs", imgPath: "/images/designs.svg" },
     { text: "Code", imgPath: "/images/code.svg" },
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
-];
-
-const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
-    { value: 200, suffix: "+", label: "Satisfied Clients" },
-    { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    
 ];
 
 const logoIconsList = [
@@ -61,7 +51,7 @@ const logoIconsList = [
         imgPath: "/images/logos/company-logo-8.png",
     },
     {
-        imgPath: "/images/logos/company-logo-9.png",
+        imgPath: "/images/logos/company-logo-9.jpg",
     },
     {
         imgPath: "/images/logos/company-logo-10.png",
@@ -71,23 +61,6 @@ const logoIconsList = [
     },
 ];
 
-const abilities = [
-    {
-        imgPath: "/images/seo.png",
-        title: "Quality Focus",
-        desc: "Delivering high-quality results while maintaining attention to every detail.",
-    },
-    {
-        imgPath: "/images/chat.png",
-        title: "Reliable Communication",
-        desc: "Keeping you updated at every step to ensure transparency and clarity.",
-    },
-    {
-        imgPath: "/images/time.png",
-        title: "On-Time Delivery",
-        desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-    },
-];
 
 const techStackImgs = [
     {
@@ -95,29 +68,33 @@ const techStackImgs = [
         imgPath: "/images/logos/react.png",
     },
     {
-        name: "Python Developer",
-        imgPath: "/images/logos/python.svg",
-    },
-    {
         name: "Backend Developer",
         imgPath: "/images/logos/node.png",
     },
     {
-        name: "Interactive Developer",
-        imgPath: "/images/logos/three.png",
+        name: "Python Developer",
+        imgPath: "/images/logos/python.svg",
     },
+   
     {
-        name: "Project Manager",
+        name: "Git",
         imgPath: "/images/logos/git.svg",
     },
 ];
 
 const techStackIcons = [
     {
-        name: "React Developer",
+        name: "Frontend Developer",
         modelPath: "/models/react_logo-transformed.glb",
         scale: 1,
         rotation: [0, 0, 0],
+    },
+
+    {
+        name: "Backend Developer",
+        modelPath: "/models/node-transformed.glb",
+        scale: 5,
+        rotation: [0, -Math.PI / 2, 0],
     },
     {
         name: "Python Developer",
@@ -126,19 +103,7 @@ const techStackIcons = [
         rotation: [0, 0, 0],
     },
     {
-        name: "Backend Developer",
-        modelPath: "/models/node-transformed.glb",
-        scale: 5,
-        rotation: [0, -Math.PI / 2, 0],
-    },
-    {
-        name: "Interactive Developer",
-        modelPath: "/models/three.js-transformed.glb",
-        scale: 0.05,
-        rotation: [0, 0, 0],
-    },
-    {
-        name: "Project Manager",
+        name: "Git",
         modelPath: "/models/git-svg-transformed.glb",
         scale: 0.05,
         rotation: [0, -Math.PI / 4, 0],
@@ -148,41 +113,42 @@ const techStackIcons = [
 const expCards = [
     {
         review:
-            "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-        imgPath: "/images/exp1.png",
+            "Aishwarya’s work on the Carbon Calculator has been exceptional; she tackles complex full-stack challenges with creativity and precision.",
         logoPath: "/images/logo1.png",
-        title: "Frontend Developer",
-        date: "January 2023 - Present",
+        title: "Junior web Developer",
+        date: "February 2026 - Present",
         responsibilities: [
-            "Developed and maintained user-facing features for the Hostinger website.",
-            "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-            "Optimized web applications for maximum speed and scalability.",
+            "Designed and developed a full-stack Carbon Calculator along with API integration, and deployment.",
+            "Built responsive and interactive user interfaces using modern web technologies to enhance user experience.",
+            "Implemented file processing, data transformation, and real-time result generation.",
+            "Ensured seamless frontend-backend integration and resolved performance issues.",
+            "Applied security best practices for data handling, API protection, and user interactions.",
+            "Collaborated with cross-functional teams to continuously enhance features and user experience.",
         ],
     },
     {
         review:
-            "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-        imgPath: "/images/exp2.png",
+            "Aishwarya consistently delivered accurate data pipelines and scripts, demonstrating strong technical skills and a collaborative attitude.",
         logoPath: "/images/logo2.png",
-        title: "Full Stack Developer",
-        date: "June 2020 - December 2023",
+        title: "Coding Assistant",
+        date: "May 2025 - December 2025",
         responsibilities: [
-            "Led the development of Docker's web applications, focusing on scalability.",
-            "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-            "Contributed to open-source projects that were used with the Docker ecosystem.",
+            "Built and maintained data pipelines to process, clean, and organize large-scale food and nutrition datasets for accurate carbon calculations.",
+            "Developed Python scripts for data extraction, transformation, and validation, improving efficiency and reliability of calculations.",
+            "Assisted in creating the carbon footprint calculator, supporting sustainability initiatives for campus dining programs.",
         ],
     },
     {
         review:
-            "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-        imgPath: "/images/exp3.png",
+            "Aishwarya contributed high-quality code and automation solutions, showing initiative and a clear understanding of modern software engineering practices.",
         logoPath: "/images/logo3.png",
-        title: "React Native Developer",
-        date: "March 2019 - May 2020",
+        title: "Software Engineering Intern",
+        date: "June 2023 - December 2023",
         responsibilities: [
-            "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-            "Improved app performance and user experience through code optimization and testing.",
-            "Coordinated with the product team to implement features based on feedback.",
+            "Engineered full-stack applications with React.js and Node.js, focusing on responsive interfaces and high-performance functionality.",
+            "Built and integrated RESTful APIs with MongoDB, enabling seamless data flow and real-time updates.",
+            "Assisted in API development, database interactions, and backend logic for core application functionality.",
+            "Learned and applied software engineering best practices, including version control, agile workflows, and code optimization."
         ],
     },
 ];
@@ -204,46 +170,35 @@ const expLogos = [
 
 const testimonials = [
     {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
+        name: "Jorge Reinso-Zegarra",
         review:
-            "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-        imgPath: "/images/client1.png",
+            "Aishwarya’s attention to detail and problem-solving skills are remarkable. She built a robust and scalable platform for us, all while maintaining excellent communication.",
     },
     {
-        name: "Wade Warren",
-        mentions: "@wadewarren",
+        name: "Collin Hames",
         review:
-            "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-        imgPath: "/images/client3.png",
+            "Working with Aishwarya was an absolute delight. She quickly understood our project requirements and delivered a sleek, intuitive web solution that exceeded our expectations.",
+    },  
+    {
+        name: "Sijavi Cheni",
+        review:
+            "Collaborating with Aishwarya was an absolute pleasure. Her professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Aishwarya's enthusiasm for every facet of development truly stands out.",
+       
     },
     {
-        name: "Guy Hawkins",
-        mentions: "@guyhawkins",
+        name: "Pallavi Sharma",
         review:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        imgPath: "/images/client2.png",
+            "Aishwarya was a pleasure to work with. She understood our requirements perfectly and delivered a website that exceeded our expectations. Her skills in both frontend and backend dev are top-notch.", 
     },
     {
-        name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
+        name: "Mahesh Kumar",
         review:
-            "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-        imgPath: "/images/client5.png",
+            "Aishwarya’s expertise in web development is truly impressive. I was impressed with how Aishwarya transformed our ideas into a functional, modern website. Her professionalism and expertise made the entire process smooth and enjoyable.",
     },
     {
-        name: "Floyd Miles",
-        mentions: "@floydmiles",
+        name: "Pavithra Gupta",
         review:
-            "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-        imgPath: "/images/client4.png",
-    },
-    {
-        name: "Albert Flores",
-        mentions: "@albertflores",
-        review:
-            "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-        imgPath: "/images/client6.png",
+            "Aishwarya delivered an outstanding web application on time and with exceptional quality. Her coding skills and design sensibilities truly stand out.",
     },
 ];
 
@@ -268,9 +223,7 @@ const socialImgs = [
 
 export {
     words,
-    abilities,
     logoIconsList,
-    counterItems,
     expCards,
     expLogos,
     testimonials,
