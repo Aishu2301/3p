@@ -203,12 +203,12 @@ const Hero = () => {
 
             {/* ── Bio ── */}
             <p className="hero-para text-white-50 md:text-xl relative z-10 pointer-events-none max-w-lg">
-              Hi, I'm Aishwarya — a Full-Stack Developer building scalable web
-              apps with React, Node.js, and Python. Currently working as a Junior
-              Web Developer, I've built real-world solutions like a Carbon
-              Calculator with live API integration and secure data pipelines. I'm
-              passionate about clean code, great UX, and solving problems that
-              matter.
+              Hi, I'm Aishwarya — Master's graduate in Computer Science and Engineering
+              from University at Buffalo. Full Stack Developer with experience in building
+              scalable, data-driven web applications using MongoDB, Express.js, React and Node.js.
+              Skilled in RESTful API development, cloud deployment, CI/CD pipelines and workflow automation.
+              Passionate about developing high-performance, user-centric applications using modern
+              web technologies.
             </p>
 
             {/* ── Tech pills ── */}
@@ -222,7 +222,7 @@ const Hero = () => {
                 zIndex: 10,
               }}
             >
-              {["React", "Node.js", "Python", "TailwindCSS", "MongoDB"].map((tech) => (
+              {["MongoDB", "Express.js", "React", "Node.js", "Python"  ].map((tech) => (
                 <span
                   key={tech}
                   style={{
