@@ -118,12 +118,12 @@ const expCards = [
         title: "Junior web Developer",
         date: "February 2026 - Present",
         responsibilities: [
-            "Designed and developed a full-stack Carbon Calculator along with API integration, and deployment.",
-            "Built responsive and interactive user interfaces using modern web technologies to enhance user experience.",
-            "Implemented file processing, data transformation, and real-time result generation.",
-            "Ensured seamless frontend-backend integration and resolved performance issues.",
-            "Applied security best practices for data handling, API protection, and user interactions.",
-            "Collaborated with cross-functional teams to continuously enhance features and user experience.",
+            "Built and deployed a full-stack Carbon Footprint Calculator, replacing manual workflows with an automated system.",
+            "Designed and implemented FastAPI backend services for data processing, carbon calculations",
+            "Ensured smooth frontend-backend integration, resolved performance issues, and optimized processing pipelines.",
+            "Architecting a shared internal framework to standardize reusable components across multiple projects.",
+            "Developing a speech-to-text automation system to convert HR call-offs into structured reports using Whisper based processing.",
+            "Leveraged AI agents and data connectors to improve data workflows and IT operations."
         ],
     },
     {
@@ -136,6 +136,7 @@ const expCards = [
             "Built and maintained data pipelines to process, clean, and organize large-scale food and nutrition datasets for accurate carbon calculations.",
             "Developed Python scripts for data extraction, transformation, and validation, improving efficiency and reliability of calculations.",
             "Assisted in creating the carbon footprint calculator, supporting sustainability initiatives for campus dining programs.",
+            "Built robust Python workflows to efficiently process large-scale recipe data, ensuring consistent and accurate results."
         ],
     },
     {
@@ -145,10 +146,10 @@ const expCards = [
         title: "Software Engineering Intern",
         date: "June 2023 - December 2023",
         responsibilities: [
-            "Engineered full-stack applications with React.js and Node.js, focusing on responsive interfaces and high-performance functionality.",
+            "Engineered full-stack applications with React.js and Node.js, focusing on responsive interfaces and high performance functionality.",
             "Built and integrated RESTful APIs with MongoDB, enabling seamless data flow and real-time updates.",
             "Assisted in API development, database interactions, and backend logic for core application functionality.",
-            "Learned and applied software engineering best practices, including version control, agile workflows, and code optimization."
+            "Participated in Agile development cycles, including code reviews, debugging, and performance optimization."
         ],
     },
 ];
