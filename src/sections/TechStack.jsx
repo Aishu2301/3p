@@ -16,12 +16,12 @@ const skillInfo = {
   },
   "Python Developer": {
     color: "#3776AB",
-    tags: ["Python", "Data Pipelines", "Scripting", "Pandas", "REST APIs"],
+    tags: ["Python", "Data Pipelines", "Scripting", "Pandas", "REST APIs",  "Fast API" ],
     desc: "Writing clean Python scripts for data processing, automation, and backend logic.",
   },
   "Backend Developer": {
     color: "#68A063",
-    tags: ["Node.js", "Express.js", "MongoDB", "REST APIs", "JWT Auth"],
+    tags: ["Node.js", "Express.js", "MongoDB", "REST APIs", "Fast API" , "JWT Auth"],
     desc: "Building scalable server-side applications and database integrations.",
   },
   "Git": {
